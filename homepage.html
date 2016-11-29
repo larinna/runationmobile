@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Runation of moblie version</title>
+        <meta name="author" content="Mengting Zhang(Christine)">
+        <meta name="keywords" content="assignment04">
+        <meta name="description" content="moblie version of Runation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/homepage.css">
+    </head>
+    
+    <body> 
+        <div class="pageContainer"> 
+            <div class="pageHome current page" id="pageHome">
+                <div class="pageInner" data-page="home">
+                    <div class="pageHomeInner pageInnerPart">
+                        <div class="topBanner">
+                            <div class= "time">
+                                <div class="status">
+                                    <img src="./images/homepage/status.png">
+                                </div>
+                            </div>
+                            <div class="bannerContent">
+                                <div id="menuIcon" class="leftIcon">
+                                    <img src="./images/homepage/menu.png" class="menuIcon">
+                                </div>
+                                <h1 class="pageBanner">Dashboard</h1>
+                                <div  id="refresh" class="rightIcon">
+                                    <img src="./images/homepage/sync.png" class="syncIcon">
+                                </div>
+                            </div> 
+                        </div> 
+                        
+                        <div class="PersonalData">
+                            <div class="TopData">
+                                <div class="TodayRuns">
+                                    <img src="./images/homepage/today-runs.png" id="tragetImg">
+                                </div>
+                                <div class="topDataValue">
+                                    <p class="distance" id="targetText">4.68</p>
+                                    <p class="unit" id="targetText">Km</p>
+                                    <p class="dollar">Dollars</p>
+                                </div>
+                                <p class="TopDataTitle">TODAY RUNS</p>
+                            </div>
+                                
+                            <div class="BottomData">
+                                <div class="BottomPicContainer cf">
+                                    <div class="TotalRuns"><img src="./images/homepage/total-runs.png" ></div>
+                                    <div class="Times"><img src="./images/homepage/times-small.png" ></div>
+                                    <div class="Runations"><img src="./images/homepage/runations-small.png" ></div>
+                                </div>
+                                
+                                <div class="BottomNumber cf">
+                                    <p class="numbers" id="targetText02">43.23</p>
+                                    <p class="numbers">13</p>
+                                    <p class="numbers">$19</p>
+                                </div>
+
+                                <div class="bottomTitle cf">
+                                    <p class="bottomTitleWording">TOTOL RUNS</p>
+                                    <p class="bottomTitleWording">TIMES</p>
+                                    <p class="bottomTitleWording">RUNATIONS</p>
+                                </div>
+
+                            </div>
+                            
+                            <div class="button">
+                                <a href="javascript:;" class="jumpToRunation" title="Runation">LET'S RUNATE!</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="pageSettingInner pageInnerPart">
+                        <div class="topBanner">
+                            <div class= "time">
+                                <div class="status">
+                                    <img src="./images/homepage/status.png">
+                                </div>
+                            </div>
+                            <div class="bannerContent">
+                                <div  class="leftIcon">
+                                    <img src="./images/homepage/menu.png" class="menuIcon">
+                                </div>
+                                <h1 class="pageBanner">SETTING</h1>
+                            </div> 
+                        </div> 
+                        <div class="settingContent">
+                            
+                            <div class="switchArea">
+                            <dl class="textContent">
+                                <dt>MobileTrack</dt>
+                                <dd>Synced Date+Time</dd>
+                            </dl>
+                            <!-- reference:https://codepen.io/BandarRaffah/pen/ibwje -->
+                            <label><input type="checkbox" class="ios-switch green bigswitch" checked /><div><div></div></div></label>
+                            </div>
+                            
+                            <div class="switchArea">
+                            <dl class="textContent">
+                                <dt>Data Access</dt>
+                                <dd>Link with other Application</dd>
+                            </dl>
+                             <!-- reference:https://codepen.io/BandarRaffah/pen/ibwje -->
+                            <label><input type="checkbox" class="ios-switch green bigswitch" checked /><div><div></div></div></label>
+                            </div>
+                            
+                            <div class="logOut"><b>Log Out</b></div>
+                        </div>
+                    </div>
+
+                    <div class="pageShadow"></div>
+
+                </div>
+                
+                <ul class="sidenav">
+                   <li><a href="javascript:;" class="cf" id="homePage"><div class="sidenavIcon"><img src="./images/menu/dashboard.png"></div><b>Homepage</b></a></li>
+                    <li><a href="javascript:;" class="cf notBuilt"><div class="sidenavIcon"><img src="./images/menu/history.png"></div><b>History</b></a></li>
+                    <li><a href="javascript:;" class="cf notBuilt"><div class="sidenavIcon"><img src="./images/menu/ranking.png"></div><b>Ranking</b></a></li>
+                    <li><a href="javascript:;" class="cf notBuilt"><div class="sidenavIcon"><img src="./images/menu/donation.png"></div><b>Donation</b></a></li>
+                    <li><a href="javascript:;" class="cf notBuilt"><div class="sidenavIcon"><img src="./images/menu/news.png"></div><b>News</b></a></li>
+                    <li><a href="javascript:;" class="cf" id="settingPage"><div class="sidenavIcon"><img src="./images/menu/setting.png"></div><b>Setting</b></a></li>
+                </ul> 
+            </div>
+
+            <div class="pageRunation after page" id="pageRunation">
+                <div class="topBanner">
+                    <div class= "time">
+                        <div class="status">
+                            <img src="./images/homepage/status.png">
+                        </div>
+                    </div>
+                    <div class= "bannerContent">
+                        <a class="leftIcon backIcon jumpToHome" href="javascript:;">
+                            <img src="./images/runation/return.png">
+                        </a>
+                        <h1 class="pageBanner">Runate A Project</h1>
+                    </div> 
+                </div> 
+                
+                <div class="projects">
+                    
+                    <div class="project">
+                        <a href="javascript:;"title="Projects">
+                            <img class="projectLogo" src="./images/runation/logo1.png" alt="Image01">
+                            <dl>
+                                <dt>Habitat for Humanity</dt>
+                                <dd>Refugee Housing Project</dd>
+                            </dl>
+                            <div class="likeIcon jumpToRunationStage2">
+                                <img src="./images/like01.png">
+                                <h2>2.7k</h2>
+                            </div>
+                        </a>
+                    </div> 
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo2.png" alt="Image02">
+                        <dl>
+                            <dt>The UN Refugee Agency</dt>
+                            <dd>Syrian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon jumpToRunationStage2 targetIcon">
+                                <img id="targetIcon01" src="./images/like01.png">
+                                <h2>3.9k</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo3.png" alt="Image03">
+                        <dl>
+                            <dt>MercyCorps</dt>
+                            <dd>Food Support Project</dd>
+                            </dl>
+                            <div class="likeIcon jumpToRunationStage2 targetIcon">
+                                <img src="./images/like01.png">
+                                <h2>3.5k</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo4.png" alt="Image04">
+                        <dl>
+                            <dt>The UN Refugee Agency</dt>
+                            <dd>European Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon jumpToRunationStage2 targetIcon">
+                                <img src="./images/like01.png">
+                                <h2>6.8k</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png" alt="Image05">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>2.1k</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png" alt="Image06">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>1.1k</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png" alt="Image07">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>3.5k</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png"  alt="Image08">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>3.5k</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png" alt="Image09">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>3.5k</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo5.png" alt="Image10">
+                        <dl>
+                            <dt>Australian Red Cross</dt>
+                            <dd>Australian Refugee Project</dd>
+                        </dl>
+                            <div class="likeIcon">
+                                <img src="./images/like01.png">
+                                <h2>1.1k</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="javascript:;">
+                        <img class="projectLogo" src="./images/runation/logo6.png" alt="Image11">
+                        <dl>
+                            <dt>Add Your Prefer Charity</dt>
+                            <dd>Please email us your choice</dd>
+                        </dl>
+                        </a>
+                    </div>  
+                </div>
+            </div>
+        
+
+            <div class="pageProject after page" id="pageProject">
+                <div class= "bannerContent"> 
+                    <a class="leftIcon backIcon jumpToRunation" href="javascript:;">
+                        <img src="./images/runation/return.png">
+                    </a>
+                    <div class="centerPart">
+                        <a href="javascript:;" id="jumpToIntro">
+                            <img class="logo" src="./images/runation/logo2.png">
+                            <h1>The UN Refugee Agency</h1>
+                            <img class="rightGo rightIcon" src="./images/runation/return.png">
+                        </a>
+                    </div>
+                </div> 
+                
+                
+               <div class="donateMiles">
+                   <div class="Miles"> 
+                        <h4>Donate Daily Miles</h4>
+                        <div class="actionOne" id="actionGO01"><a href="./homepageStage2.html" title="Donate Miles">Today: 4.68 Miles</a></div>
+                    </div>
+                
+                    <div class="startRun">
+                        <div class="runText">
+                            <p class="runTextOr">Or</p>
+                            <p class="runTextStart">Start A Run</p>
+                        </div>
+                        <div class="actionTwo" id="actionGO01"><a href="./homepageStage2.html" title="Donate Miles">Outdoor Exercise</a></div>
+                        <div class="actionTwo" id="actionGO01"><a href="./homepageStage2.html" title="Donate Miles">Indoor Exercise</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pageProject after page" id="pageProjectIntro">
+                <div class= "bannerContent"> 
+                    <a class="leftIcon backIcon jumpToProject" href="javascript:;">
+                        <img src="./images/runation/return.png">
+                    </a>
+                    <a class="rightIcon shareIcon">
+                        <img src="./images/shareIcon.png">
+                    </a>
+                    <div class="centerPart">
+                        <a href="javascript:;" class="jumpToProject">
+                            <img class="logo" src="./images/videoPlayButton.png">
+                        </a>
+                    </div>
+                </div> 
+                
+                <div class="textPresent">
+                    <div class="likeIcon jumpToRunationStage2 targetIcon">
+                        <img id="targetIcon02" src="./images/like01.png">
+                    </div>
+                    <div class="textContent">
+                        <h2>Qualifications for home ownership</h2>
+                        <div class="textContentWrapper">
+                            <p>Habitat for Humanity performs an extensive background check on   potential homeowners, including character references, employer interviews, and audit of finances. The applicants are required to sign release forms authorizing Habitat for Humanity to perform this background check. This ensures that Habitat's risk is reasonable when selling a home and that the applicant family is in a suitable financial position to take on the responsibility of a mortgage.</p>
+                            <p>There are typically a First and a Second Mortgage. The Second Mortgage is put in place to protect any equity that is left that is not captured in the first mortgage. The homeowners pay down the first mortgage, and after a stated period of time (which varies from affiliate to affiliate) of living in the same home, the Second Mortgage is forgiven (however, it is not always forgiven). However, The Right of First Refusal stays in force until the mortgage is paid in full.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="pageSponsor after page" id="pageSponsor">
+                <div class="bannerContent">
+                    <a class="leftIcon backIcon jumpToHome" id="actionGO02" href="javascript:;">
+                        <img src="./images/runation/return.png">
+                    </a>
+                    <a class="jumpToHome" id="actionGO02">
+                        <img src="./images/bg2.png">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+     
+        <div class="background"></div>
+
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script>
+            
+            jQuery(document).ready(function($) {
+
+
+                $('body').on('click', '.menuIcon', function(event) {
+                    $(".pageHome").addClass('slideActive');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+                $('body').on('click', '.pageShadow', function(event) {
+                    $(".pageHome").removeClass('slideActive');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+                $('body').on('click', '#homePage', function(event) {
+                    $('.pageInner').attr('data-page','home');
+                    $(".pageHome").removeClass('slideActive');
+                    event.preventDefault();
+                });
+                $('body').on('click', '#settingPage', function(event) {
+                    $('.pageInner').attr('data-page','setting');
+                    $(".pageHome").removeClass('slideActive');
+                    event.preventDefault();
+                });
+
+
+                $('body').on('click', '#refresh', function(event) {
+                    window.location.reload();
+                    event.preventDefault();
+                });
+
+
+
+                $('body').on('click', '.jumpToHome', function(event) {
+                    pageSwitch('pageHome');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+                $('body').on('click', '.jumpToRunation', function(event) {
+                    pageSwitch('pageRunation');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+
+                $('body').on('click', '.project a', function(event) {
+                    pageSwitch('pageProject');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+
+                $('body').on('click', '#jumpToIntro', function(event) {
+                    pageSwitch('pageProjectIntro');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+
+                $('body').on('click', '.jumpToProject', function(event) {
+                    pageSwitch('pageProject');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+                
+
+                $('body').on('click', '.likeIcon', function(event) {
+                    $('#targetIcon01').attr('src','./images/like02.png');
+                    $('#targetIcon02').attr('src','./images/like02.png');
+                });
+                
+                $('body').on('click', '#actionGO01', function(event) {
+                    pageSwitch('pageSponsor');
+                    event.preventDefault();
+                    /* Act on the event, change img and color of specific elements */
+                });
+                
+                $('body').on('click', '#actionGO02', function(event) {
+                    pageSwitch('pageHome');
+                    $('#tragetImg').attr('src', './images/reward.png');
+                    $('#targetText').css('color','#ffffff'); 
+                    event.preventDefault();
+                    /* Act on the event, change img and color of specific elements */
+                });
+
+
+                function pageSwitch(pid){
+                    var targetDiv = $("#" + pid);
+                    $(".page").removeClass('current');
+                    targetDiv.prevAll('.page').removeClass('after').addClass('before');
+                    targetDiv.nextAll('.page').removeClass('before').addClass('after');
+                    targetDiv.removeClass('before').removeClass('after').addClass('current');
+                }
+            });
+        </script>
+    </body>
+</html>

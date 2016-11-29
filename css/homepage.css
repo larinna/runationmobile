@@ -1,0 +1,1027 @@
+/* reference https://codepen.io/BandarRaffah/pen/ibwje  */
+
+html, body, h1, img, dl, dt, a, p {margin:0px; padding:0px;}
+
+body {width:100%; height:100%; font-family: AvenirLight, HelveticaBN, Arial, sans-serif; }
+
+.pageContainer{
+    float:left;
+    width:375px;
+    height:667px;
+    margin:auto;
+    position:absolute;
+    z-index: 10;
+    left:50%;
+    -webkit-transform: translate3d(-50%, 0 ,0); 
+       -moz-transform: translate3d(-50%, 0 ,0);
+        -ms-transform: translate3d(-50%, 0 ,0);
+         -o-transform: translate3d(-50%, 0 ,0);
+            transform: translate3d(-50%, 0 ,0);
+    top:0;
+    bottom:0;
+    box-shadow:0px 30px 70px #432921;
+    overflow: hidden;
+}
+
+.pageContainer .page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.25s 0s;
+       -moz-transition:    -moz-transform 0.25s 0s;
+        -ms-transition:     -ms-transform 0.25s 0s;
+         -o-transition:      -o-transform 0.25s 0s;
+            transition:         transform 0.25s 0s;
+    background: white;
+    overflow: hidden;
+}
+
+
+.page.before{
+    -webkit-transform: translate3d(-100%, 0, 0);
+       -moz-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+         -o-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); 
+}
+.page.after{
+    -webkit-transform: translate3d(100%, 0, 0);
+       -moz-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
+         -o-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); 
+}
+.page.current{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); 
+}
+
+.runatePorject .pageProject{
+    
+}
+
+.pageInnerPart{
+    opacity: 0;
+    -webkit-transition: opacity 0.4s 0s;
+       -moz-transition: opacity 0.4s 0s;
+        -ms-transition: opacity 0.4s 0s;
+         -o-transition: opacity 0.4s 0s;
+            transition: opacity 0.4s 0s;
+    z-index: -1;
+}
+
+div[data-page=home] .pageHomeInner{
+    opacity: 1;
+    z-index: 50;
+}
+
+div[data-page=setting] .pageSettingInner{
+    opacity: 1;
+    z-index: 50;
+}
+
+
+/*
+    common properties:
+        -   Back Buttom;
+        -   a.link color;
+*/ 
+
+/*  top banner */
+.topBanner {
+    width:100%;
+    height:70px;
+}
+/*  back buttom */
+.backIcon img{
+    width: 40px;
+    height: 40px;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.backIcon:focus,.backIcon:active{
+    background-color:transparent;
+}
+
+.rightGo img{
+    width: 40px;
+    height: 40px;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+
+.rightGo:focus,.rightGo:active{
+    background-color:transparent;
+}
+
+.shareIcon img{
+    width: 40px;
+    height: 40px;
+}
+
+.shareIcon:focus,.shareIcon:active{
+    background-color:transparent;
+    
+}
+
+.cf:after,
+.cf:before {
+    content: '';
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+}
+
+
+a{
+    color: #2fa0ec;
+    text-decoration: none;
+    outline: none;
+}
+a:focus{
+    background:#5f6375;
+    color:#ffc223;
+}
+
+/*  time banner */
+.time {
+    width:100%;
+    height:20px;
+    display: block;
+}
+.topBanner .time .status img{
+    width: 100%;
+}
+/*  icon banner */
+.bannerContent{
+    width:100%;
+    height:45px;
+    display: block;
+    position: relative;
+}
+.menuIcon{
+    width: 100%;
+    height: 100%;
+}
+
+.syncIcon{
+    width: 100%;
+    height: 100%;
+}
+.rightIcon {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    display: block; 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.leftIcon{
+    display: block; 
+    position: absolute; 
+    left: 10px; 
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pageBanner{
+    font-size: 20px;
+    text-align:center;
+    height:40px;
+    line-height:40px;
+    overflow:hidden;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.pageHome .pageShadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -1px;
+    -webkit-transition: opacity 0.3s 0s;
+       -moz-transition: opacity 0.3s 0s;
+        -ms-transition: opacity 0.3s 0s;
+         -o-transition: opacity 0.3s 0s;
+            transition: opacity 0.3s 0s;
+}
+.pageHome.slideActive .pageShadow{
+    z-index: 100;
+    opacity: 1;
+}
+
+/* homepage individual style */
+.pageHome .topBanner {
+    background:#53ccff;
+}
+.pageHome .pageHomeInner{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+
+.PersonalData {
+    width: 100%;
+    /* height:1204px; */
+}
+
+.TopData {
+    margin:0 auto;
+    width:94%;
+    margin: 0 auto;
+    height:300px;
+    overflow:hidden;
+    position:relative;
+}
+
+.TodayRuns img{
+    margin: 35px auto 0 auto;
+    display: block;
+    width:210px;
+    height:210px;
+}
+
+.topDataValue{
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+       -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+         -o-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+}
+.distance{
+    font-size:3em;
+    color:#ffc223;
+    text-align: center;
+}
+.unit{
+    font-size:1em;
+    color:#53ccff;
+    text-align: center;
+}
+
+.dollar{
+    font-size:1em;
+    color:white;
+    text-align: center;
+}
+
+.TopDataTitle{
+    font-size: 1.4em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.BottomData {
+    margin:0px auto;
+    width:94%;
+}
+
+.BottomPicContainer {
+    margin:12px auto 0 auto;
+    display:block;
+}
+.BottomPicContainer img{
+    width: 100%;
+}
+.TotalRuns {
+    float:left;
+    width: 33%;
+}
+.Times {
+    float:left;
+    width: 33%;
+}
+.Runations {
+    float:left;
+    width: 33%;
+}
+
+
+
+.BottomNumber {
+    font-size:1.9em;
+    color:#53ccff;
+    display:block;
+    position:relative;
+    margin: 0 auto;
+}
+.BottomNumber p{
+    width: 33%;
+    text-align: center;
+    line-height:50px;
+    height:50px;
+    float: left;
+} 
+.bottomTitle{
+    width:100%;
+    display:block;
+}
+.bottomTitle p{
+    width: 33%;
+    font-size:0.8em;
+    text-align: center;
+    line-height:50px;
+    height:50px;
+    float: left;
+}
+.button{
+    margin-top: 20px;
+}
+.button a{
+    text-decoration: none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+    width: 80%;
+    height: 54px;
+    background:#ffc223;
+    font-size: 1.2em;
+    line-height: 54px;
+    color:white;
+}
+
+.button a:focus {
+    background:#3e4357;
+    color:white;
+}
+
+
+#Background img{
+    height:100%;
+}
+
+li{
+    list-style-type: none;
+}
+  
+.pageInner{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background:white;
+    transition: transform 0.25s 0s;
+    -webkit-transition: -webkit-transform 0.25s 0s;
+}
+
+/*Nav styles*/
+.sidenav {
+    background: #3e4357; 
+    width: 250px;
+    position: absolute; 
+    left: -1px; 
+    top: 0; 
+    bottom: 0; 
+    padding: 0;
+    padding-top: 75px;
+    margin:auto;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    -webkit-transform: translate3d(-100%, 0 ,0);
+       -moz-transform: translate3d(-100%, 0 ,0);
+        -ms-transform: translate3d(-100%, 0 ,0);
+         -o-transform: translate3d(-100%, 0 ,0);
+            transform: translate3d(-100%, 0 ,0);
+}
+
+.notBuilt {
+    cursor:wait;
+}
+
+.sidenav li { 
+    height:70px;
+    list-style-type: none;
+}
+.sidenav li:focus { 
+    background:#ffc223;
+}
+.sidenav a { 
+    color: white; 
+    text-decoration: none; 
+    display: block;
+}
+.sidenavIcon {
+    width:70px;
+    height:70px;
+    float:left;
+}
+
+.sidenavIcon img{
+    margin:15px;
+    width: 40px;
+}
+
+.sidenav{
+    -webkit-transition: -webkit-transform 0.25s 0s;
+       -moz-transition:    -moz-transform 0.25s 0s;
+        -ms-transition:     -ms-transform 0.25s 0s;
+         -o-transition:      -o-transform 0.25s 0s;
+            transition: transform 0.25s 0s;
+}
+
+.sidenav b {
+    height:70px;
+    line-height:70px;
+    float:left;
+    font-size:1em; 
+    transform: translateX(75px); 
+    transition: all 0.4s; 
+}
+
+.slideActive .pageInner{
+    transform: translate3d(250px, 0, 0);
+    -webkit-transform: translate3d(250px, 0, 0);
+}
+.slideActive .sidenav{
+    -webkit-transform: translate3d(0, 0 ,0);
+       -moz-transform: translate3d(0, 0 ,0);
+        -ms-transform: translate3d(0, 0 ,0);
+         -o-transform: translate3d(0, 0 ,0);
+            transform: translate3d(0, 0 ,0);
+}
+.slideActive .sidenav b {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}  
+
+.slideActive .sidenav li:nth-child(1) b {transition-delay: 0.08s;}
+.slideActive .sidenav li:nth-child(2) b {transition-delay: 0.16s;}
+.slideActive .sidenav li:nth-child(3) b {transition-delay: 0.24s;}
+.slideActive .sidenav li:nth-child(4) b {transition-delay: 0.32s;}
+.slideActive .sidenav li:nth-child(5) b {transition-delay: 0.40s;}
+.slideActive .sidenav li:nth-child(6) b {transition-delay: 0.48s;} 
+
+
+@font-face {
+    font-family:AvenirLight;
+    src:url(AvenirLight.otf);
+}
+
+
+.background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url(../images/1.png);
+    background-size: 100% 100%;
+}
+
+
+/* runation页面 独立样式 全部挂在pageRunation或者rundation下 */
+.pageRunation{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.pageRunation .topBanner {
+    background:#53ccff;
+}
+
+.pageRunation .projects {
+    width: 100%;
+    height: 602px;
+    overflow:scroll;
+}
+
+.pageRunation .projects .project {
+    height:100px;
+    display:block;
+    margin-left:24px;
+    border-bottom:solid 1px #eeeeee;
+}
+.pageRunation .projects .project img.projectLogo{
+    width: 78px;
+    float: left;
+}
+
+.pageRunation .project img{
+    display:inline-block;
+    float:left;
+    margin-top: 11px;
+}
+
+.pageRunation .project a{
+    display:block;
+    text-decoration:none;
+    height: 100px;
+}
+
+.pageRunation .project a:focus {
+    background-color:#f0fbff;
+}
+
+.pageRunation .project a dl {
+    display:inline-block;
+    width:190px;
+    height:100px;
+    float:left;
+}
+
+.pageRunation .project a dl dt {
+    color:black;
+    margin-left: 15px;
+    margin-top: 26px;
+    font-size: 1em;
+    display:block;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    float:left;
+}
+
+
+.pageRunation .project a dl dd {
+    margin-left: 15px;
+    font-size: 0.8em;
+    color:#888888;
+    display:block;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    float:left;
+}
+
+.pageRunation .project .likeIcon img {
+    display:inline-block;
+    float:right;
+    width:20px;
+    height:20px;
+    margin-top:35px;
+    margin-right:5px;
+}
+
+.pageRunation .project .likeIcon h2 {
+    float:left;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    margin-left:15px;
+    margin-top:35px;
+    line-height:20px;
+    font-size:0.6em;
+    color:#9f9f9f;
+}
+
+
+
+/* 同理 project页独立样式 */
+.pageProject{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index: 100;
+    /*  -webkit-transform: translate3d(200%, 0, 0);
+       -moz-transform: translate3d(200%, 0, 0);
+        -ms-transform: translate3d(200%, 0, 0);
+         -o-transform: translate3d(200%, 0, 0);
+            transform: translate3d(200%,  0, 0);    */
+        
+}
+
+.pageProject .bannerContent {
+    width: 100%;
+    height: 235px;
+    background-image:url(../images/refugee2.png);  
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 4px black;
+}
+
+/*LOGO Icon Area*/
+.pageProject .bannerContent .logo {
+    height: 74px;
+    display: block;
+    margin: 0 auto;
+    cursor:wait;
+}
+
+.pageProject .bannerContent .centerPart {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate3d( 0, -50%, 0);
+       -moz-transform: translate3d( 0, -50%, 0);
+        -ms-transform: translate3d( 0, -50%, 0);
+         -o-transform: translate3d( 0, -50%, 0);
+            transform: translate3d( 0, -50%, 0);
+}
+.centerPart a{
+    display: block;
+}
+.centerPart a:active,.centerPart a:focus,.centerPart a:hover{
+    background-color: transparent;
+    -webkit-appearance: none;    
+}
+.pageProject .backIcon{
+    top: 20px;
+}
+
+/*Habitat for humanity 文字部分*/
+.pageProject .bannerContent h1 {
+    display:block;
+    color:white;
+    text-shadow:0px 2px 10px black;
+    text-align:center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.pageProject .rightGo {
+    width: 40px;
+    height: 40px;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+
+.rightGo img {
+    top:20px;
+}
+
+.textPresent .likeIcon {
+    width:20px;
+    height:20px;
+    float:right;
+    margin-top:20px;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.textPresent .likeIcon img{
+    width:20px;
+    height:20px;
+}
+
+
+/*下方文字部分区域*/
+.pageProject .textPresent {
+    margin: 0 15px;
+}
+
+.pageProject .textContentWrapper {
+    height: 365px;
+    overflow: scroll;
+    color:#1f1f1f;
+    font-family: "AvenirLight";
+}
+/*h2:Title*/
+.pageProject .textPresent h2{
+    width:100%;
+    padding-top:25px;
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+.pageProject .textContentWrapper p{
+    width:100%;
+    font-size: 0.9em;
+    line-height:200%;
+    margin-bottom: 20px;
+}
+
+
+/* runateProject */
+
+/*下方黑色背景元素*/
+.donateMiles {
+    color:#3e4357;
+    width:100%;
+    height:864px;
+   /* background:#3e4357;*/
+}
+
+
+/*donate daily miles + buttom 1*/
+.Miles h4{
+    height: 75px;
+    line-height: 75px;
+    text-align:center;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin:0;
+}
+
+/*buttom 1*/
+.actionOne {
+    margin:0 auto;
+    text-align:center;
+    text-decoration:none;
+    font-size: 0.9em;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    background:#ffc223;    
+    border: solid 1px #ffc233;
+    -webkit-transition: all 0.25s 0s;
+       -moz-transition: all 0.25s 0s;
+        -ms-transition: all 0.25s 0s;
+         -o-transition: all 0.25s 0s;
+            transition: all 0.25s 0s;
+}
+
+
+/*这里有个问题，如果换成foucs就变不了颜色*/
+/* focus指的是"聚焦" , hover指的是"被指针盖住"，所以不应该换成focus */
+
+.actionOne:hover {
+    background:#3e4357;
+    border: 1px solid #fff;
+    color:aqua;
+} 
+
+.actionOne a{
+    font:"AvenirMedium";
+    color:white;
+    text-decoration:none;
+}
+
+/*下方元素，从or至indoor run*/
+.startRun{
+    width:100%;
+    height: 287px;
+}
+
+.runText{
+    margin-top: 40px;
+}
+.startRun .runTextOr{
+    color:#999999;
+    text-align:center;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+
+.startRun .runTextStart{
+    text-align:center;
+    font-size: 1.2em;
+    margin-bottom:10px;
+}
+
+/*下方两个buttom的按键设置*/
+.actionTwo {
+    margin:auto;
+    margin-bottom: 25px;
+    text-align:center;
+    text-decoration:none;
+    font-size: 0.9em;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    background:#53ccff;
+    border:solid 1px #fff;
+    -webkit-transition: all 0.25s 0s;
+       -moz-transition: all 0.25s 0s;
+        -ms-transition: all 0.25s 0s;
+         -o-transition: all 0.25s 0s;
+            transition: all 0.25s 0s;
+}
+
+.actionTwo:hover {
+    background:#3e4357;
+    color:#53ccff;
+}
+
+.actionTwo a{
+    font:"AvenirMedium";
+    color:white;
+    text-decoration:none;
+}
+
+.pageSponsor {
+    width:100%;
+    height:100%;
+}
+
+.pageSponsor .leftIcon img{
+    display: block; 
+    position: absolute;  
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pageSponsor .bannerContent h1 {
+    position:absolute;
+    color:white;
+}
+
+/* setting 页面 */
+
+
+.pageSetting .topBanner {
+    background:#53ccff;
+}
+
+.bannerContent .shareIcon {
+    width: 40px;
+    height: 40px;
+    margin-top:20px;
+    cursor: wait;
+}
+
+.pageSettingInner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*白色背景区域*/
+.pageSettingInner .settingContent {
+    float:left;
+    width:100%;
+    height: 100%;
+    background:#efefef;
+}
+
+/*setting*/
+.pageSettingInner h2 {
+    margin:auto;
+    margin-top:30px;
+    color:#6f6f6f;
+    width:100%;
+    height:60px;
+    line-height:60px;
+    font-size:1.4em;
+    border-bottom:solid 1px #cfcfcf;
+}
+
+/*setting左24px对齐*/
+.pageSettingInner .settingContent h2 b{
+    margin-left:24px; 
+}
+
+/*setting下方两行区域*/
+.pageSettingInner .switchArea {
+    margin:auto;
+    background:#fff;
+    border-bottom:solid 1px #cfcfcf;
+}
+
+
+/*setting下方的两行text区域*/
+.pageSettingInner .textContent {
+    display:inline-block;
+    margin-left: 20px;
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*左侧文字*/
+.pageSettingInner .textContent dt{
+    font-size: 0.9em;
+    float:left;
+    display:inline-block;
+}
+
+/*中间区域*/
+.pageSettingInner .textContent dd {
+    color:#6f6f6f;
+    margin-left: 100px;
+    font-size: 0.7em;
+}
+
+
+/* reference https://codepen.io/BandarRaffah/pen/ibwje  */
+input[type="checkbox"] { 
+    position: absolute;
+    opacity: 0;
+}
+
+/* Normal Track */
+input[type="checkbox"].ios-switch + div {
+    display:inline-block;
+    vertical-align:middle;
+    width: 40px;    
+    height: 20px;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: .4s;
+    -webkit-transition-property: background-color, box-shadow;
+    box-shadow: inset 0 0 0 0px rgba(0,0,0,0.4);
+    margin: 15px 0.6em 15px 1.2em;
+}
+
+/* Big Track */
+input[type="checkbox"].bigswitch.ios-switch + div {
+    width: 47px;    
+    height: 22px;
+}
+
+/* Green Track */
+input[type="checkbox"].green.ios-switch:checked + div {
+    background-color: #00e359;
+    border: 1px solid rgba(0, 162, 63,1);
+    box-shadow: inset 0 0 0 10px rgba(0,227,89,1);
+}
+
+/* Normal Knob */
+input[type="checkbox"].ios-switch + div > div {
+    float: left;
+    width: 9px; 
+    height: 9px;
+    border-radius: inherit;
+    background: #ffffff;
+    -webkit-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-property: transform, background-color, box-shadow;
+    -moz-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+    -moz-transition-duration: 0.4s;
+    -moz-transition-property: transform, background-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+/* Big Knob */
+input[type="checkbox"].bigswitch.ios-switch + div > div {
+    width: 20px; 
+    height: 20px;
+    margin-top: 1px;
+}
+
+/* Checked Big Knob (Blue Style) */
+input[type="checkbox"].bigswitch.ios-switch:checked + div > div {
+    -webkit-transform: translate3d(25px, 0, 0);
+    -moz-transform: translate3d(25px, 0, 0);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(8, 80, 172,1);
+}
+
+div.logOut {
+    margin-top: 350px;
+    width: 100%;
+    height: 40px;
+    background:#fff;
+    border-top:solid 1px #cfcfcf;
+    border-bottom:solid 1px #cfcfcf;
+    text-align: center;
+}
+
+div.logOut b {
+    font-size: 0.9em;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+div.Background img{
+    height:100%;
+}
+
+@font-face{
+    font-family:AvenirLight, AvenirMedium;
+    src:url(AvenirLight.otf),url(AvenirMedium.otf);
+}
+
